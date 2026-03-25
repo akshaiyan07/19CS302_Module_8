@@ -1,53 +1,44 @@
-## Given an array of strings sorted in lexicographical order, print all of its permutations in strict lexicographical order. If two permutations look the same, only print one of them. See the 'note' below for an example.
+# EX 39 C program to find sum of digits.
+## DATE:
+## AIM:
+To write a C program to find sum of digits.
 
-Complete the function next_permutation which generates the permutations in the described order.
+## Algorithm
 
-## For example, s=[ab,bc,cd]. The six permutations in correct order are:
+1.Declare integer variables n and sum, and initialize sum to 0.
 
-ab bc cd
-ab cd bc
-bc ab cd
-bc cd ab
-cd ab bc
-cd bc ab
-Note: There may be two or more of the same string as elements of .
-## For example, s=[ab,bc,cd]. Only one instance of a permutation where all elements match should be printed. In other words, if s[0]==s[1], then print either s[0]  or s[1] but not both.
+2.Read the number n from the user.
 
-A three element array having three distinct elements has six permutations as shown above. In this case, there are three matching pairs of permutations where ab and ba are switched. We only print the three visibly unique permutations:
+3.Use a loop to repeat until n becomes 0.
 
-ab ab bc
-ab bc ab
-bc ab ab
-## Input Format
+4.In each iteration, extract the last digit using n % 10 and add it to sum, then remove the last digit using n = n / 10.
 
-The first line of each test file contains a single integer , the length of the string array .
+5.After the loop ends, display the value of sum. 
 
-Each of the next  lines contains a string .
+## Program:
+```c
+#include<stdio.h>
+int main()
+{
+    int n,sum=0;
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        sum=sum+n%10;
+        n=n/10;
+    }
+    printf("%d",sum);
+    return 0;
+}
+```
 
-Constraints
+## Output:
 
- contains only lowercase English letters.
-Output Format
+<img width="273" height="195" alt="Screenshot 2026-03-19 191103" src="https://github.com/user-attachments/assets/56949fac-1c2c-4ffd-ac16-155045b6914d" />
 
-Print each permutation as a list of space-separated strings on a single line.
+## Result:
+Thus the program was executed and the output was verified successfully.
 
-## Sample Input 0
 
-2
-ab
-cd
-## Sample Output 0
-
-ab cd
-cd ab
-## Sample Input 1
-
-3
-a
-bc
-bc
-## Sample Output 1
-
-a bc bc
-bc a bc
-bc bc a
+## Result:
+Thus the program was executed and the output was verified successfully.
