@@ -26,3 +26,6 @@ int main()
 ## Output
 
 <img width="497" height="203" alt="Screenshot 2026-03-19 190342" src="https://github.com/user-attachments/assets/69bd1969-dddb-4f40-81ec-6896ff07ddcf" />
+
+## Result:
+Thus the program was executed and the output was verified successfully.
